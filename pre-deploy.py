@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 pre-deploy.py
 
@@ -14,9 +13,6 @@ import sys
 import subprocess
 import re
 import io
-
-if sys.version_info.major == 3:
-    unicode = str
 
 
 def read(*names, **kwargs):
@@ -39,7 +35,7 @@ def check():
     git_version = subprocess.check_output(
         ["git", "describe", "--abbrev=0", "--tags"]
     ).decode('utf-8').strip()
-    library_version = unicode("v" + find_version("pyzotero/zotero.py")).strip()
+    library_version = str("v" + find_version("pyzotero/zotero.py")).strip()
     # invert the boolean because 1 (True) == Bash error exit code
     print("Git version: %s\nLibrary version: %s" % (git_version, library_version))
     return not library_version == git_version

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # pylint: disable=R0904
 """
 zotero.py
@@ -30,7 +29,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 """
-from __future__ import unicode_literals
 
 __author__ = "Stephan Hügel"
 __version__ = "1.4.25"
@@ -64,20 +62,11 @@ from . import zotero_errors as ze
 
 from functools import wraps
 
-# Python 3 compatibility faffing
-if sys.version_info[0] == 2:
-    from urllib import urlencode
-    from urllib import quote
-    from urlparse import urlparse, urlunparse, parse_qsl, urlunsplit
-else:
-    from urllib.parse import urlencode
-    from urllib.parse import urlparse, urlunparse, parse_qsl, urlunsplit
-    from urllib.parse import quote
+from urllib.parse import urlencode
+from urllib.parse import urlparse, urlunparse, parse_qsl, urlunsplit
+from urllib.parse import quote
 
-try:
-    from collections import OrderedDict
-except ImportError:
-    from ordereddict import OrderedDict
+from collections import OrderedDict
 
 # Avoid hanging the application if there's no server response
 timeout = 30
@@ -104,11 +93,6 @@ def token():
     """ Return a unique 32-char write-token
     """
     return str(uuid.uuid4().hex)
-
-
-# Override feedparser's buggy isBase64 method until they fix it
-# Note: this is fixed in v6.x, but we can't switch to it because it doesn't support Python 2.7
-feedparser._FeedParserMixin._isBase64 = ib64_patched
 
 
 def cleanwrap(func):
@@ -285,7 +269,7 @@ def ss_wrap(func):
     return wrapper
 
 
-class Zotero(object):
+class Zotero:
     """
     Zotero API methods
     A full list of methods can be found here:
@@ -1653,7 +1637,7 @@ def error_handler(zot, req):
         raise ze.HTTPError(err_msg(req))
 
 
-class SavedSearch(object):
+class SavedSearch:
     """ Saved search functionality """
 
     def __init__(self, zinstance):
@@ -1819,7 +1803,7 @@ class SavedSearch(object):
                 )
 
 
-class Zupload(object):
+class Zupload:
     """
     Zotero file attachment helper
     Receives a Zotero instance, file(s) to upload, and optional parent ID

@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Tests for the Pyzotero module
 
@@ -41,17 +40,10 @@ try:
 except ModuleNotFoundError:
     from pyzotero import zotero as z
 
-# Python 3 compatibility faffing
-try:
-    from urllib import urlencode
-    from urllib import quote
-    from urlparse import urlparse
-    from urlparse import parse_qs
-except ImportError:
-    from urllib.parse import urlencode
-    from urllib.parse import urlparse
-    from urllib.parse import parse_qs
-    from urllib.parse import quote
+from urllib.parse import urlencode
+from urllib.parse import urlparse
+from urllib.parse import parse_qs
+from urllib.parse import quote
 
 
 class ZoteroTests(unittest.TestCase):
