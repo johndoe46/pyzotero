@@ -32,15 +32,17 @@ with open('README.md') as f:
     readme = f.read()
 
 setup(
-    name="Pyzotero",
+    name="pyzotero3",
     version=version,
     description="Python 3 wrapper for the Zotero API",
+    maintainer="Raffaele Salmaso",
+    maintainer_email="raffaele.salmaso@gmail.com",
     author="Stephan Hügel",
     author_email="urschrei@gmail.com",
     license="MIT License",
-    url="https://github.com/urschrei/pyzotero",
+    url="https://github.com/rsalmaso/pyzotero3",
     include_package_data=True,
-    download_url="https://github.com/urschrei/pyzotero/tarball/v%s" % version,
+    download_url="https://github.com/rsalmaso/pyzotero3/tarball/v%s" % version,
     keywords=["zotero"],
     classifiers=[
         "Programming Language :: Python",

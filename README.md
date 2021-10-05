@@ -1,10 +1,10 @@
-[![Wheel Status](https://img.shields.io/pypi/wheel/Pyzotero.svg?style=flat)](https://pypi.python.org/pypi/Pyzotero/) [![Supported Python versions](https://img.shields.io/pypi/pyversions/Pyzotero.svg?style=flat)](https://pypi.python.org/pypi/Pyzotero/) [![Docs](https://readthedocs.org/projects/pyzotero/badge/?version=latest)](http://pyzotero.readthedocs.org/en/latest/?badge=latest) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](license.txt) [![PyPI Version](https://img.shields.io/pypi/v/Pyzotero.svg)](https://pypi.python.org/pypi/Pyzotero)  
+[![Wheel Status](https://img.shields.io/pypi/wheel/pyzotero3.svg?style=flat)](https://pypi.python.org/pypi/pyzotero3/) [![Supported Python versions](https://img.shields.io/pypi/pyversions/pyzotero3.svg?style=flat)](https://pypi.python.org/pypi/pyzotero3/) [![Docs](https://readthedocs.org/projects/pyzotero/badge/?version=latest)](http://pyzotero.readthedocs.org/en/latest/?badge=latest) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](license.txt) [![PyPI Version](https://img.shields.io/pypi/v/pyzotero3.svg)](https://pypi.python.org/pypi/pyzotero3)
 
-# Pyzotero: An API Client for the Zotero API
+# Pyzotero3: An API Client for the Zotero API (python 3 only)
 
 # Quickstart
 
-1. `pip install pyzotero` **or** `conda config --add channels conda-forge && conda install pyzotero`
+1. `pip install pyzotero3`
 2. You'll need the ID of the personal or group library you want to access:
     - Your **personal library ID** is available [here](https://www.zotero.org/settings/keys), in the section `Your userID for use in API calls`
     - For **group libraries**, the ID can be found by opening the group's page: `https://www.zotero.org/groups/groupname`, and hovering over the `group settings` link. The ID is the integer after `/groups/`
@@ -30,15 +30,14 @@ Full documentation of available Pyzotero methods, code examples, and sample outp
 
 # Installation
 
-* Using [pip][10]: `pip install pyzotero` (it's available as a wheel, and is tested on Python 2.7, 3.5, 3.6, 3.7, and 3.8)
-* Using Anaconda:`conda config --add channels conda-forge && conda install pyzotero`
+* Using [pip][10]: `pip install pyzotero3` (it's available as a wheel, and is tested on Python 3.6, 3.7, 3.8, 3.9 and 3.10)
 * From a local clone, if you wish to install Pyzotero from a specific branch: 
 
 Example:
 
 ``` bash
-git clone git://github.com/urschrei/pyzotero.git
-cd pyzotero
+git clone git://github.com/rsalmaso/pyzotero3.git
+cd pyzotero3
 git checkout dev
 pip install .
 ```
@@ -49,7 +48,7 @@ Run `test_zotero.py` in the [pyzotero/test](test) directory, or, using [Nose2][7
 
 ## Issues
 
-The latest commits can be found on the [dev branch][9], although new features are currently rare. If you encounter an error, please open an issue.
+The latest commits can be found on the [main branch][9], although new features are currently rare. If you encounter an error, please open an issue.
 
 ## Pull Requests
 
@@ -82,7 +81,7 @@ Pyzotero is licensed under the [MIT license][8]. See [license.txt](license.txt) 
 [3]: http://pyzotero.readthedocs.org/en/latest/
 [7]: https://nose2.readthedocs.io/en/latest/
 [8]: http://opensource.org/licenses/MIT
-[9]: https://github.com/urschrei/pyzotero/tree/dev
+[9]: https://github.com/rsalmaso/pyzotero3/tree/main
 [10]: http://www.pip-installer.org/en/latest/index.html
 † This isn't strictly true: you only need an API key for personal libraries and non-public group libraries.
 
