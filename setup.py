@@ -34,10 +34,9 @@ with open('README.md') as f:
 setup(
     name="pyzotero3",
     version=version,
-    description="Python 3 wrapper for the Zotero API",
+    description="Python 3 fork of the Pyzotero Package",
     maintainer="Raffaele Salmaso",
     maintainer_email="raffaele.salmaso@gmail.com",
-    author="Stephan Hügel",
     author_email="urschrei@gmail.com",
     license="MIT License",
     url="https://github.com/rsalmaso/pyzotero3",
